@@ -16,11 +16,10 @@ import java.util.function.Function;
 public class fluentWait {
 
 
-
     WebDriver driver;
+
     @BeforeMethod
-    public void beforeMethod()
-    {
+    public void beforeMethod() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://www.leafground.com/waits.xhtml");
@@ -47,5 +46,6 @@ public class fluentWait {
         });
 
         String getTextNewBtn = driver.findElement(By.xpath("//button[@id='j_idt87:j_idt90']/span[@class='ui-button-text ui-c']")).getText();
-        System.out.println("New Button text is :" + getTextNewBtn);
+        System.out.println("New Button text is Fluent meth:" + getTextNewBtn);
     }
+}
